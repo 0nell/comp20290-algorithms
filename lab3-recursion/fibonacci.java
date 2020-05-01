@@ -17,12 +17,25 @@ static int fibonacciIterative(int n){
   return fib;
  }
 
+ static void towersOfHanoi(int disk, char source, char dest, char auxillary){
+     if(disk == 1){
+        System.out.println("Move disk " + disk + " from " +  source + " to " + dest); 
+     }
+     else{
+        towersOfHanoi(disk-1, source, auxillary, dest);
+        System.out.println("Move disk " + disk + " from " +  source + " to " + dest); 
+        towersOfHanoi(disk-1,auxillary, dest, source) ;
+     }
+     
+ }
+
  public static void main (String args[]) 
     { 
     int n = 9; 
-    System.out.println(fibonacciIterative(n)); 
+    System.out.println(fibonacciIterative(n));
+    
     } 
-
+    
  
  
 }

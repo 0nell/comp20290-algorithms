@@ -16,7 +16,7 @@
  ******************************************************************************/
 
 import java.util.Arrays;
-import java.lang.*;
+
 
 
 public class ThreeSumB {
@@ -64,7 +64,10 @@ public class ThreeSumB {
     public static void main(String[] args)  { 
         In in = new In(args[0]);
         int[] a = in.readAllInts();
+        final long startTime = System.currentTimeMillis(); 
         int count = count(a);
+        final long elapsedTime = System.currentTimeMillis() - startTime;  
+        System.out.println(elapsedTime);  
         System.out.println("count =" + count);
     } 
 } 

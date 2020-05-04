@@ -2,19 +2,18 @@
 
 /******************************************************************************
  *  Compilation:  javac HuffmanAlgorithm.java
- *
+ *  To run java HuffmanAlgorithm [compress/decompress] [Input file] [Output file]
+ * 
  *  Compress or expand a binary input stream using the Huffman algorithm.
  *
- * To run
- * java HuffmanAlgorithm [compress/decompress] [Input file] [Output file]
+ * 
  *
  ******************************************************************************/
 
 
 /**
- *  Add in your information about each method etc. here
- *
- *  @author Lleno Anya
+ *   *
+ *  *  @author Lleno Anya
  */
 public class HuffmanAlgorithm {
 
@@ -69,9 +68,7 @@ public class HuffmanAlgorithm {
         int[] characterFrequency = new int[R];
         for (int i = 0; i < c.length; i++)
         characterFrequency[c[i]]++;
-        
-        
-        
+ 
         root = buildTrie(characterFrequency);
         
         String[] st = new String[R];

@@ -64,15 +64,14 @@ public class HuffmanAlgorithm {
             text.append(input.readChar());
         }
         char[] c = text.toString().toCharArray();
-
         int[] characterFrequency = new int[R];
         for (int i = 0; i < c.length; i++)
-        characterFrequency[c[i]]++;
+            characterFrequency[c[i]]++;
  
         root = buildTrie(characterFrequency);
         
-        String[] st = new String[R];
-        buildCode(st, root, "");
+        String[] table = new String[R];
+        buildCode(table, root, "");
         
 
         BinaryOut out = new BinaryOut(fileOut);
@@ -80,7 +79,7 @@ public class HuffmanAlgorithm {
         out.write(c.length);
         // use Huffman code to encode input
         for (int i = 0; i < c.length; i++) {
-            String code = st[c[i]];
+            String code = table[c[i]];
             for (int j = 0; j < code.length(); j++) {
                 if (code.charAt(j) == '0') {
                     out.write(false);
@@ -164,13 +163,13 @@ public class HuffmanAlgorithm {
     }
 
     // make a lookup table from symbols and their encodings
-    private static void buildCode(String[] st, Node x, String s) {
+    private static void buildCode(String[] table, Node x, String s) {
         if (!x.isLeaf()) {
-            buildCode(st, x.left,  s + '0');
-            buildCode(st, x.right, s + '1');
+            buildCode(table, x.left,  s + '0');
+            buildCode(table, x.right, s + '1');
         }
         else {
-            st[x.ch] = s;
+            table[x.ch] = s;
         }
     }
 

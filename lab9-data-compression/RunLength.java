@@ -86,7 +86,30 @@ public class RunLength {
         BinaryStdOut.close();
     }
 
+    //0000000000000001111111000000011111111111
+    //0010110100110001
+    //compresion 2/5
+    //2/17
+    // 16/1536
+    //16/ 6144
 
+    public static void encoding(String input){
+        int counter = 0;
+        char tempChar = input.charAt(0);
+        
+        for(int i = 0; i < input.length(); i++){
+            if(tempChar == input.charAt(i)){
+                counter++;
+            }
+            else{
+                System.out.print(tempChar + "" + counter);
+                counter = 1;
+            } 
+            tempChar = input.charAt(i);
+        }
+        System.out.print(tempChar + "" + counter);
+    }
+    
     /**
      * Sample client that calls {@code compress()} if the command-line
      * argument is "-" an {@code expand()} if it is "+".

@@ -1,9 +1,11 @@
-# comp20290-algorithms
+Algorithms COMP20290 Code REPOSITORY
 
-This repo is for you to track your work in the practicals for COMP20290 over the course. 
-You should commit both the java code you work on AND the completed short questions that you complete along the way. 
+This repository contains work from the Module Algorithms in the spring semester of 2020
+It is a collection of algorithms implemented in Java that I worked on while taking this module as well as an implementation of the Huffman Algorithm as part of an assignment
 
-We're looking to see regular commits over time, rather than one large commit before the submission deadline. 
-You do NOT have to have perfect answers but rather show that you have attempted the questions from the practicals yourself rather than copying-and-pasting code. 
+The files are located in their relevant lab folders
+There are no dependancies
 
-Happy coding!
+Authors
+Mark Matthews
+Lleno Anya

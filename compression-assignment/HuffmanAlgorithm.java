@@ -116,8 +116,10 @@ public class HuffmanAlgorithm {
             Node trie = root;
             while (!trie.isLeaf()) {
                 boolean bit = in.readBoolean();
-                if (bit) trie = trie.right;
-                else     trie = trie.left;
+                if (bit) 
+                    trie = trie.right;
+                else     
+                    trie = trie.left;
             }
             out.write(trie.ch, 8);
         }
